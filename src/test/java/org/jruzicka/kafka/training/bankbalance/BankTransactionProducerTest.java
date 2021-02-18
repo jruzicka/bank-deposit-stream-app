@@ -23,7 +23,6 @@ public class BankTransactionProducerTest {
             JsonNode node = mapper.readTree(value);
             assertEquals(node.get("name").asText(), "john");
             assertTrue("Amount should be GT 0 and LT 100", node.get("amount").asInt() < 100);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
